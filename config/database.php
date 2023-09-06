@@ -1,6 +1,7 @@
 <?php
+    require_once 'config.php';
 
-/*     class Database
+    class Database
     {
         public static function conectar()
         {
@@ -17,4 +18,4 @@
                 exit;
             }
         }
-    } */
+    }
