@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2023 a las 22:16:24
+-- Tiempo de generación: 08-09-2023 a las 00:12:12
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -34,6 +34,7 @@ CREATE TABLE `alumnos` (
   `dni` int(11) NOT NULL,
   `telefono` varchar(45) DEFAULT NULL,
   `usuario_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -85,6 +86,7 @@ CREATE TABLE `inscripcion_ciclo` (
   `id` int(11) NOT NULL,
   `ciclo_lectivo_id` int(11) NOT NULL,
   `alumno_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,9 +98,9 @@ CREATE TABLE `inscripcion_ciclo` (
 
 CREATE TABLE `inscripcion_materia` (
   `id` int(11) NOT NULL,
-  `fecha` date NOT NULL,
   `materia_id` int(11) NOT NULL,
   `alumno_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -112,6 +114,7 @@ CREATE TABLE `inscripcion_mesa` (
   `id` int(11) NOT NULL,
   `mesa_examen_id` int(11) NOT NULL,
   `alumno_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -244,6 +247,7 @@ CREATE TABLE `profesores` (
   `apellido` varchar(255) NOT NULL,
   `telefono` varchar(45) DEFAULT NULL,
   `usuario_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -258,6 +262,16 @@ CREATE TABLE `roles` (
   `nombre` varchar(45) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `nombre`, `estado`) VALUES
+(1, 'Administrativo', 1),
+(2, 'Administrador', 1),
+(3, 'Profesor', 1),
+(4, 'Alumno', 1);
 
 -- --------------------------------------------------------
 
@@ -283,8 +297,19 @@ CREATE TABLE `usuarios` (
   `email` varchar(45) NOT NULL,
   `password` varchar(255) NOT NULL,
   `rol_id` int(11) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `email`, `password`, `rol_id`, `fecha`, `estado`) VALUES
+(1, 'one.diego@gmail.com', '$2y$10$rigbQKzgHbIOMX74/khkUOqePHdQ26m6n9cwhZTW80TjkRNuvay/K', 4, '2023-09-06 21:52:24', 1),
+(2, 'emanuel.pelaitay85@gmail.com', '$2y$10$SlmThtzVq0QFFQPfBBURcuXOjc/7PwcxuXs2yxuhNP9a/nuzy6I4S', 4, '2023-09-06 20:51:53', 1),
+(3, 'carlospqu@gmail.com', '$2y$10$wKuu8PhTrX74A5HuXMVesOpOLsN0ktEYwAR21pl6ArvwRoso4hJZi', 4, '2023-09-06 20:59:14', 1),
+(4, 'lola@gmail.com', '$2y$10$08vFt49a5ryj2RUsL3693.1DCVJMr8HO7t6TLkDP5ZYPOtkInop9e', 4, '2023-09-07 21:49:57', 1);
 
 --
 -- Índices para tablas volcadas
@@ -533,7 +558,7 @@ ALTER TABLE `profesores`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tribunal_mesa`
@@ -545,7 +570,7 @@ ALTER TABLE `tribunal_mesa`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

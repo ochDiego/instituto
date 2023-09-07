@@ -8,6 +8,7 @@
 
         $mensaje='';
 
+        //Verifica que los campos no esten vacios
         if(empty($email) || empty($password)){
             $mensaje = "Error: Todos los campos son requeridos";
         }else{

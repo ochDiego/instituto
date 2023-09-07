@@ -32,7 +32,7 @@
         <?php if(isset($_SESSION['logueado']) && $_SESSION['logueado'] == "ok"): ?>
               <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      one.diego@gmail.com
+                      <?= $_SESSION['email']; ?>
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                       <li><a class="dropdown-item" href="/instituto/secciones/alumno/perfil.php">Mi perfil</a></li>
