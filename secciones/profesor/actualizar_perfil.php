@@ -27,13 +27,13 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input name="nombre" class="form-control" id="inputFirstName" type="text" value="<?= (isset($nombre))?$nombre : ((isset($alumno['nombre'])) ? $alumno['nombre'] : '') ?>"/>
+                                                        <input name="nombre" class="form-control" id="inputFirstName" type="text" value="<?= (isset($nombre))?$nombre : ((isset($profesor['nombre'])) ? $profesor['nombre'] : '') ?>"/>
                                                         <label for="inputFirstName">Nombre</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input name="apellido" class="form-control" id="inputLastName" type="text" value="<?= (isset($apellido))?$apellido : ((isset($alumno['apellido'])) ? $alumno['apellido'] : '') ?>"/>
+                                                        <input name="apellido" class="form-control" id="inputLastName" type="text" value="<?= (isset($apellido))?$apellido : ((isset($profesor['apellido'])) ? $profesor['apellido'] : '') ?>"/>
                                                         <label for="inputLastName">Apellido</label>
                                                     </div>
                                                 </div>
@@ -42,13 +42,13 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input name="dni" class="form-control" id="inputPassword" type="number" value="<?= (isset($dni))?$dni : ((isset($alumno['dni'])) ? $alumno['dni'] : '') ?>"/>
+                                                        <input name="dni" class="form-control" id="inputPassword" type="number" value="<?= (isset($dni))?$dni : ((isset($profesor['dni'])) ? $profesor['dni'] : '') ?>"/>
                                                         <label for="inputPassword">DNI:</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input name="telefono" class="form-control" id="inputPasswordConfirm" type="text" value="<?= (isset($telefono))?$telefono : ((isset($alumno['telefono'])) ? $alumno['telefono'] : '') ?>"/>
+                                                        <input name="telefono" class="form-control" id="inputPasswordConfirm" type="text" value="<?= (isset($telefono))?$telefono : ((isset($profesor['telefono'])) ? $profesor['telefono'] : '') ?>"/>
                                                         <label for="inputPasswordConfirm">Teléfono</label>
                                                     </div>
                                                 </div>

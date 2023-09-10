@@ -18,7 +18,10 @@
 <header class="p-3 mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/instituto/index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+
+        <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/instituto"; ?> 
+
+        <a href="<?= $url; ?>" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
           <img src="/instituto/assets/imagenes/descarga.png" alt="" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
         </a>
 
@@ -35,15 +38,15 @@
                       <?= $_SESSION['email']; ?>
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                      <li><a class="dropdown-item" href="/instituto/secciones/alumno/perfil.php">Mi perfil</a></li>
-                      <li><a class="dropdown-item" href="/instituto/secciones/alumno/actualizar_perfil.php">Actualizar mis datos</a></li>
+                      <li><a class="dropdown-item" href="<?= $url; ?>/secciones/alumno/perfil.php">Mi perfil</a></li>
+                      <li><a class="dropdown-item" href="<?= $url; ?>/secciones/alumno/actualizar_perfil.php">Actualizar mis datos</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/instituto/secciones/admin/cerrar.php">Cerrar sesión</a></li>
+                      <li><a class="dropdown-item" href="<?= $url; ?>/secciones/admin/cerrar.php">Cerrar sesión</a></li>
                     </ul>
               </div> 
         <?php else: ?>
           <div class="text-end">
-            <a href="/instituto/secciones/admin/index.php" class="btn btn-outline-secondary me-2">Acceder</a>
+            <a href="<?= $url; ?>/secciones/admin/index.php" class="btn btn-outline-secondary me-2">Acceder</a>
           </div>
         <?php endif ?>
 

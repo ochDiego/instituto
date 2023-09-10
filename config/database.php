@@ -11,7 +11,7 @@
                 PDO::ATTR_EMULATE_PREPARES => false
             ];
             try {
-                $conn=new PDO($dns,DB_USERNAME,DB_PASSWORD,$options);
+                $conn =new PDO($dns,DB_USERNAME,DB_PASSWORD,$options);
                 return $conn;
             } catch (PDOException $e) {
                 echo "ERROR: " . $e->getMessage() . '<br>';

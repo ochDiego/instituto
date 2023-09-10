@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-09-2023 a las 00:12:12
+-- Tiempo de generación: 10-09-2023 a las 15:35:49
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -38,6 +38,13 @@ CREATE TABLE `alumnos` (
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `alumnos`
+--
+
+INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `usuario_id`, `fecha`, `estado`) VALUES
+(1, 'Diego', 'Ochoa', 33743380, '2643171768', 1, '2023-09-10 10:23:53', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -48,7 +55,8 @@ CREATE TABLE `carreras` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
-  `duracion` varchar(45) DEFAULT NULL
+  `duracion` varchar(45) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -202,8 +210,8 @@ CREATE TABLE `mesa_examen` (
   `materia_id` int(11) NOT NULL,
   `profesor_id` int(11) NOT NULL,
   `ciclo_lectivo_id` int(11) NOT NULL,
-  `estado` tinyint(1) NOT NULL DEFAULT 1,
-  `carrera_id` int(11) NOT NULL
+  `carrera_id` int(11) NOT NULL,
+  `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -232,7 +240,8 @@ CREATE TABLE `plan_estudio` (
   `carga_horaria` varchar(45) DEFAULT NULL,
   `despliegue` varchar(45) DEFAULT NULL,
   `correlatividades` varchar(60) DEFAULT NULL,
-  `formato` varchar(60) DEFAULT NULL
+  `formato` varchar(60) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -245,6 +254,7 @@ CREATE TABLE `profesores` (
   `id` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(255) NOT NULL,
+  `dni` int(11) NOT NULL,
   `telefono` varchar(45) DEFAULT NULL,
   `usuario_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -306,10 +316,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `email`, `password`, `rol_id`, `fecha`, `estado`) VALUES
-(1, 'one.diego@gmail.com', '$2y$10$rigbQKzgHbIOMX74/khkUOqePHdQ26m6n9cwhZTW80TjkRNuvay/K', 4, '2023-09-06 21:52:24', 1),
+(1, 'one.diego@gmail.com', '$2y$10$upfXkxrPEIfxiXXToHeleumR5JmxTo99Ubl0uCG28tweP/36Nmvpu', 1, '2023-09-10 11:45:32', 1),
 (2, 'emanuel.pelaitay85@gmail.com', '$2y$10$SlmThtzVq0QFFQPfBBURcuXOjc/7PwcxuXs2yxuhNP9a/nuzy6I4S', 4, '2023-09-06 20:51:53', 1),
 (3, 'carlospqu@gmail.com', '$2y$10$wKuu8PhTrX74A5HuXMVesOpOLsN0ktEYwAR21pl6ArvwRoso4hJZi', 4, '2023-09-06 20:59:14', 1),
-(4, 'lola@gmail.com', '$2y$10$08vFt49a5ryj2RUsL3693.1DCVJMr8HO7t6TLkDP5ZYPOtkInop9e', 4, '2023-09-07 21:49:57', 1);
+(4, 'lola@gmail.com', '$2y$10$08vFt49a5ryj2RUsL3693.1DCVJMr8HO7t6TLkDP5ZYPOtkInop9e', 4, '2023-09-07 21:49:57', 1),
+(5, 'lorena@gmail.com', '$2y$10$XtXrr.m0C83MOPfIj2RRce.hdcNFv6wGNTJAc.Nf4M.6ntKu1VlBe', 4, '2023-09-07 23:31:22', 1),
+(6, 'analia@gmail.com', '$2y$10$7uYvUeGwuU1PxF6GWb7spOwCjW7pGkCum9/5Mb6DhoBnkFxXaGlPC', 3, '2023-09-10 13:06:33', 1);
 
 --
 -- Índices para tablas volcadas
@@ -462,7 +474,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `carreras`
@@ -570,7 +582,7 @@ ALTER TABLE `tribunal_mesa`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

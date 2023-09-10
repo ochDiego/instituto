@@ -7,6 +7,7 @@
      $sentencia = $pdo->query("SELECT u.id, u.email, u.password, u.fecha, r.nombre AS rol FROM usuarios U JOIN roles R ON U.rol_id = R.id ORDER BY U.id DESC");
      $usuarios = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
+
 ?>
 
         <h1 class="mt-4 text-center">Lista de usuarios</h1>
@@ -50,4 +51,4 @@
             </div>
         </div>
     
-    <?php require_once '../templates/header.php'; ?>
+    <?php require_once '../templates/footer.php'; ?>

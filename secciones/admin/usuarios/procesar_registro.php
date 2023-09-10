@@ -4,6 +4,7 @@
     
 
     $pdo = Database::conectar();
+
     $sentencia = $pdo->query("SELECT * FROM roles ORDER BY id DESC");
     $roles = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
@@ -20,7 +21,7 @@
             $mensaje = "Error: todos los campos son requeridos";
         }else{
             //Verifica si existe el email
-            $sentencia = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? LIMIT 1");
+            $sentencia = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND estado = 1 LIMIT 1");
             $sentencia->bindParam(1,$email);
             $sentencia->execute();
             $resultado = $sentencia->fetch(PDO::FETCH_ASSOC);
@@ -29,6 +30,7 @@
                 $mensaje = "Error: el email ya existe, ingrese otro por favor.";
             }
 
+            //Encripta la contraseña
             $password = password_hash($password,PASSWORD_DEFAULT);
 
 
