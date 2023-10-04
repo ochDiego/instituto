@@ -18,7 +18,7 @@
 
                             <?php if(isset($mensaje)): ?>
             
-                                    <div class="alert alert-danger" role="alert">
+                                    <div class="alert alert-<?= $tipo; ?>" role="alert">
                                             
                                         <strong><?= $mensaje; ?></strong>
                                     </div>

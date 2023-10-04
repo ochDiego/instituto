@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-09-2023 a las 15:35:49
+-- Tiempo de generación: 04-10-2023 a las 22:51:05
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -43,7 +43,8 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `usuario_id`, `fecha`, `estado`) VALUES
-(1, 'Diego', 'Ochoa', 33743380, '2643171768', 1, '2023-09-10 10:23:53', 1);
+(1, 'Diego', 'Ochoa', 33743380, '2643171768', 1, '2023-09-10 10:23:53', 1),
+(4, 'Cristian', 'Rivero', 32083839, '2645452967', 8, '2023-09-15 00:11:58', 1);
 
 -- --------------------------------------------------------
 
@@ -58,6 +59,14 @@ CREATE TABLE `carreras` (
   `duracion` varchar(45) DEFAULT NULL,
   `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `carreras`
+--
+
+INSERT INTO `carreras` (`id`, `nombre`, `descripcion`, `duracion`, `estado`) VALUES
+(1, 'Tecnicatura Superior en Desarrollo de Software', NULL, '3 años', 1),
+(2, 'Tecnicatura Superior en Gestión de Energías Renovables', NULL, '3 años', 1);
 
 -- --------------------------------------------------------
 
@@ -139,6 +148,57 @@ CREATE TABLE `materias` (
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `materias`
+--
+
+INSERT INTO `materias` (`id`, `nombre`, `parent_id`, `estado`) VALUES
+(1, 'Comprensión y Producción de Textos', NULL, 1),
+(2, 'Matemática I', NULL, 1),
+(3, 'Inglés Técnico', NULL, 1),
+(4, 'Sistema de Información I', NULL, 1),
+(5, 'Programación I', NULL, 1),
+(6, 'Procesamiento de Datos', NULL, 1),
+(7, 'Contexto Socio-Económico y Productivo', NULL, 1),
+(8, 'Ambiente Empresarial', NULL, 1),
+(9, 'Sistema operativo y Redes I', NULL, 1),
+(10, 'Programación II', NULL, 1),
+(11, 'Práctica Profesionalizante I', NULL, 1),
+(12, 'Marco Jurídico', NULL, 1),
+(13, 'Matemática II', NULL, 1),
+(14, 'Sistemas Administrativos', NULL, 1),
+(15, 'Programación III', NULL, 1),
+(16, 'Base de Datos I', NULL, 1),
+(17, 'Práctica Profesionalizante II', NULL, 1),
+(18, 'Matemática III', NULL, 1),
+(19, 'Desarrollo de Software I', NULL, 1),
+(20, 'Sistema de Información II', NULL, 1),
+(21, 'Práctica Profesionalizante III', NULL, 1),
+(22, 'Base de Datos II', NULL, 1),
+(23, 'Sistema Operativo y Redes II', NULL, 1),
+(24, 'Práctica Profesionalizante IV', NULL, 1),
+(25, 'Desarrollo de Software II', NULL, 1),
+(26, 'Ética y Deontología Profesional', NULL, 1),
+(27, 'Práctica Profesionalizante V', NULL, 1),
+(28, 'Matemática Aplicada', NULL, 1),
+(29, 'Energías Renovables', NULL, 1),
+(30, 'Física Aplicada', NULL, 1),
+(31, 'Electrotecnia General', NULL, 1),
+(32, 'Química Aplicada', NULL, 1),
+(33, 'Energía Solar Térmica', NULL, 1),
+(34, 'Instalaciones Eléctricas', NULL, 1),
+(35, 'Tecnología de la Representación Gráfica', NULL, 1),
+(36, 'Informática Aplicada', NULL, 1),
+(37, 'Energía Solar Fotovoltáica', NULL, 1),
+(38, 'Energía de la Biomasa', NULL, 1),
+(39, 'Energía Eólica', NULL, 1),
+(40, 'Energía Minihidráulica y Geotérmica', NULL, 1),
+(41, 'Uso Racional de la Energía', NULL, 1),
+(42, 'Gestión de Seguridad, Salud Ocupacional y M. Ambiente', NULL, 1),
+(43, 'Gestión de la Operación de Centrales de Energías Renov.', NULL, 1),
+(44, 'Arquitectura Bioclimática', NULL, 1),
+(45, 'Gestión de Proyectos de Inversión', NULL, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -149,8 +209,71 @@ CREATE TABLE `materia_carrera` (
   `id` int(11) NOT NULL,
   `materia_id` int(11) NOT NULL,
   `carrera_id` int(11) NOT NULL,
+  `periodo` varchar(30) DEFAULT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `materia_carrera`
+--
+
+INSERT INTO `materia_carrera` (`id`, `materia_id`, `carrera_id`, `periodo`, `estado`) VALUES
+(1, 1, 1, 'Primer Año', 1),
+(2, 2, 1, 'Primer Año', 1),
+(3, 3, 1, 'Primer Año', 1),
+(4, 4, 1, 'Primer Año', 1),
+(5, 4, 1, 'Primer Año', 1),
+(6, 5, 1, 'Primer Año', 1),
+(7, 6, 1, 'Primer Año', 1),
+(8, 7, 1, 'Primer Año', 1),
+(9, 8, 1, 'Primer Año', 1),
+(10, 9, 1, 'Primer Año', 1),
+(11, 10, 1, 'Primer Año', 1),
+(12, 11, 1, 'Primer Año', 1),
+(13, 12, 1, 'Segundo Año', 1),
+(14, 13, 1, 'Segundo Año', 1),
+(15, 14, 1, 'Segundo Año', 1),
+(16, 15, 1, 'Segundo Año', 1),
+(17, 16, 1, 'Segundo Año', 1),
+(18, 17, 1, 'Segundo Año', 1),
+(19, 18, 1, 'Segundo Año', 1),
+(20, 19, 1, 'Segundo Año', 1),
+(21, 4, 1, 'Segundo Año', 1),
+(22, 21, 1, 'Segundo Año', 1),
+(23, 22, 1, 'Tercer Año', 1),
+(24, 23, 1, 'Tercer Año', 1),
+(25, 24, 1, 'Tercer Año', 1),
+(26, 25, 1, 'Tercer Año', 1),
+(27, 26, 1, 'Tercer Año', 1),
+(28, 27, 1, 'Tercer Año', 1),
+(29, 1, 2, 'Primer Año', 1),
+(30, 28, 2, 'Primer Año', 1),
+(31, 29, 2, 'Primer Año', 1),
+(32, 30, 2, 'Primer Año', 1),
+(33, 31, 2, 'Primer Año', 1),
+(34, 32, 2, 'Primer Año', 1),
+(35, 7, 2, 'Primer Año', 1),
+(36, 33, 2, 'Primer Año', 1),
+(37, 3, 2, 'Primer Año', 1),
+(38, 34, 2, 'Primer Año', 1),
+(39, 11, 2, 'Primer Año', 1),
+(40, 12, 2, 'Segundo Año', 1),
+(41, 35, 2, 'Segundo Año', 1),
+(42, 36, 2, 'Segundo Año', 1),
+(43, 37, 2, 'Segundo Año', 1),
+(44, 38, 2, 'Segundo Año', 1),
+(45, 39, 2, 'Segundo Año', 1),
+(46, 40, 2, 'Segundo Año', 1),
+(47, 41, 2, 'Segundo Año', 1),
+(48, 17, 2, 'Segundo Año', 1),
+(49, 21, 2, 'Segundo Año', 1),
+(50, 42, 2, 'Tercer Año', 1),
+(51, 43, 2, 'Tercer Año', 1),
+(52, 24, 2, 'Tercer Año', 1),
+(53, 44, 2, 'Tercer Año', 1),
+(54, 26, 2, 'Tercer Año', 1),
+(55, 27, 2, 'Tercer Año', 1),
+(56, 45, 2, 'Tercer Año', 1);
 
 -- --------------------------------------------------------
 
@@ -319,9 +442,13 @@ INSERT INTO `usuarios` (`id`, `email`, `password`, `rol_id`, `fecha`, `estado`) 
 (1, 'one.diego@gmail.com', '$2y$10$upfXkxrPEIfxiXXToHeleumR5JmxTo99Ubl0uCG28tweP/36Nmvpu', 1, '2023-09-10 11:45:32', 1),
 (2, 'emanuel.pelaitay85@gmail.com', '$2y$10$SlmThtzVq0QFFQPfBBURcuXOjc/7PwcxuXs2yxuhNP9a/nuzy6I4S', 4, '2023-09-06 20:51:53', 1),
 (3, 'carlospqu@gmail.com', '$2y$10$wKuu8PhTrX74A5HuXMVesOpOLsN0ktEYwAR21pl6ArvwRoso4hJZi', 4, '2023-09-06 20:59:14', 1),
-(4, 'lola@gmail.com', '$2y$10$08vFt49a5ryj2RUsL3693.1DCVJMr8HO7t6TLkDP5ZYPOtkInop9e', 4, '2023-09-07 21:49:57', 1),
-(5, 'lorena@gmail.com', '$2y$10$XtXrr.m0C83MOPfIj2RRce.hdcNFv6wGNTJAc.Nf4M.6ntKu1VlBe', 4, '2023-09-07 23:31:22', 1),
-(6, 'analia@gmail.com', '$2y$10$7uYvUeGwuU1PxF6GWb7spOwCjW7pGkCum9/5Mb6DhoBnkFxXaGlPC', 3, '2023-09-10 13:06:33', 1);
+(8, 'cristianrivero102@gmail.com', '$2y$10$.Ya2c3qlg18T6vhjJ6uCk.ZxBnczT1BQ5MTTGXxRriWaD3D9Eucxe', 4, '2023-09-15 00:11:59', 1),
+(9, 'lucioanoriveros247@gmail.com', '$2y$10$Wl/UPYsJSFvrda7EyZDjoefumLv74YrUp3d05Q6zLU1THfZYnISn6', 4, '2023-09-15 00:13:36', 1),
+(10, 'marcelosole18@gmail.com', '$2y$10$v8cZgmVxnu/05F1ZnvARhOsKxUzM3.qEhcSFAqHvq16gF8zoaUW3y', 4, '2023-09-15 00:16:17', 1),
+(11, 'maxi.saraspe1223@gmail.com', '$2y$10$HAud2d1n4le8/OXrFLBmSeoDkaNlDDc0DBFNO8AVkYNNkJfbHL/ae', 4, '2023-09-15 00:18:41', 1),
+(12, 'lm7375142@gmail.com', '$2y$10$f42EZYHNd6UwJTrFduzVSuEsJH21fTxRbDf7JAMOUbI88OLhd9P/2', 4, '2023-09-15 00:21:21', 1),
+(13, 'mariasoledadguardia4@gmail.com', '$2y$10$Xoi8WpUnEgPHwx2oGHOkSeGUMuTsyqikAUs1c/COFtBPJiJLHcaM.', 4, '2023-09-15 00:24:06', 1),
+(14, 'salinasalejandra900@gmail.com', '$2y$10$Z1T2Dv5EX.GgcatGU.Y0.O0PptlgkqPA04rVAX9a6ICfW0VPTyYIS', 4, '2023-09-17 22:25:07', 1);
 
 --
 -- Índices para tablas volcadas
@@ -474,13 +601,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `carreras`
 --
 ALTER TABLE `carreras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ciclo_lectivo`
@@ -516,13 +643,13 @@ ALTER TABLE `inscripcion_mesa`
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `materia_carrera`
 --
 ALTER TABLE `materia_carrera`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de la tabla `materia_nota`
@@ -582,7 +709,7 @@ ALTER TABLE `tribunal_mesa`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas

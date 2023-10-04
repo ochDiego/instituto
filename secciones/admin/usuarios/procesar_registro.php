@@ -15,10 +15,12 @@
         $rol_id = $_POST['rol_id'];
 
         $mensaje = '';
+        $tipo = '';
 
         //Verifica que los campos no esten vacios
         if(empty($_POST['email']) || empty($_POST['password']) || empty($_POST['passwordConfirmacion'])){
             $mensaje = "Error: todos los campos son requeridos";
+            $tipo = "danger";
         }else{
             //Verifica si existe el email
             $sentencia = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND estado = 1 LIMIT 1");
@@ -28,6 +30,7 @@
 
             if($resultado){
                 $mensaje = "Error: el email ya existe, ingrese otro por favor.";
+                $tipo = "danger";
             }
 
             //Encripta la contraseña
@@ -43,9 +46,10 @@
 
                 if($sentencia->execute()){
                     
-                    $_SESSION['info'] = "Usuario creado con éxito!";
+                    $mensaje = "Usuario creado con éxito!";
+                    $tipo = "success";
 
-                    header('location:usuarios.php');
+                   // header('location:usuarios.php');
                 }
             }
         }

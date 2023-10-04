@@ -29,7 +29,7 @@
         }else{
 
             //Verifica si el usuario ya existe
-            if(count($alumno) > 0){
+            if($alumno){
 
                 //Verifica que ambos campos no esten vacios
                 if(isset($password) AND isset($passwordConfirmacion)){

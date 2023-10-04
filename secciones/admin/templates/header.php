@@ -20,6 +20,7 @@
         <link href="<?= $url; ?>/assets/css/datatables@7.1.2_dist_style.min.css" rel="stylesheet" />
         <link href="<?= $url; ?>/assets/css/styles.css" rel="stylesheet" />
         <script src="<?= $url; ?>/assets/js/fontawesome_all.js crossorigin="anonymous"></script>
+        <link href="<?= $url; ?>/assets/css/jquery.dataTables.min.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -63,6 +64,36 @@
                             <a class="nav-link" href="<?= $url; ?>/secciones/admin/usuarios/usuarios.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Usuarios
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/alumnos/alumnos.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Alumnos
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/profesores/profesores.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Profesores
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/materias/materias.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Materias
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/carreras/carreras.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Carreras
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/mesas/mesas.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mesas
+                            </a>
+
+                            <a class="nav-link" href="<?= $url; ?>/secciones/admin/inscriptos_mesas/inscriptos_mesas.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Inscriptos mesas
                             </a>
                            
                         </div>
