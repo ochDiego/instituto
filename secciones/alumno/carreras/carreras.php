@@ -10,7 +10,7 @@
                 <div class="row d-flex justify-content-evenly align-items-center">
                     
                     <div class="col-5">
-                        <div class="card bg-dark text-white" height="200">
+                        <div class="card bg-dark text-white shadow-lg">
                             <img src="../../../assets/imagenes/carreras/software/desarrollo_software.jpg" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Desarrollo de Software</h3>
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="col-5">
-                        <div class="card bg-dark text-white" height="200">
+                        <div class="card bg-dark text-white shadow-lg">
                             <img src="../../../assets/imagenes/carreras/energias/energias-renovables.webp" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Gestión de Energías Renovables</h3>

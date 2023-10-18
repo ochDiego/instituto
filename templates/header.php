@@ -15,14 +15,14 @@
 </head>
 <body>
 
-  <header class="p-3 mb-3 border-bottom">
+  <header class="mb-3 border-bottom bg-light shadow" style="position:sticky; position:-webkit-sticky; top:0; z-index:1000;">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
         <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/instituto"; ?>
 
         <a href="<?= $url; ?>" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-          <img src="/instituto/assets/imagenes/descarga.png" alt="" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <img src="/instituto/assets/imagenes/isft.jfif" alt="Logo ISFTA" class="bi me-2 img-fluid"   role="img" aria-label="Bootstrap">
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
