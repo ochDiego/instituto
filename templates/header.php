@@ -31,15 +31,23 @@
           <li><a href="#" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">Contáctanos</a></li>
 
-          <li>
-            <ul class="dropdown-menu text-small text-dark" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="<?= $url; ?>/secciones/alumno/perfil.php">Tecnicatura Superior en Desarrollo de Software</a></li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle link-dark" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Carreras
+                  <i class="fas fa-user fa-fw"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="<?= $url; ?>#desarrolloSoftware">Tecnicatura Superior en Desarrollo de Software</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="<?= $url; ?>/secciones/alumno/actualizar_perfil.php">Tecnicatura Superior en Gestión de Energías Renovables</a></li>
-            </ul>
+                <li><a class="dropdown-item" href="<?= $url; ?>#energiasRenovables">Tecnicatura Superior en Gestión de Energías Renovables</a></li>
+              </ul>
           </li>
+
+          <?php if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == "ok") : ?>
+            <li class="border-2 rounded-3 bg-primary ms-5"><a href="<?= $url; ?>/secciones/alumno/carreras/carreras.php" class="nav-link px-2 link-light">Mis Carreras</a></li>
+          <?php endif ?>
 
         </ul>
 
