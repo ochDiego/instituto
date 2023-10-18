@@ -443,7 +443,7 @@ INSERT INTO `usuarios` (`id`, `email`, `password`, `rol_id`, `fecha`, `estado`) 
 (2, 'emanuel.pelaitay85@gmail.com', '$2y$10$SlmThtzVq0QFFQPfBBURcuXOjc/7PwcxuXs2yxuhNP9a/nuzy6I4S', 4, '2023-09-06 20:51:53', 1),
 (3, 'carlospqu@gmail.com', '$2y$10$wKuu8PhTrX74A5HuXMVesOpOLsN0ktEYwAR21pl6ArvwRoso4hJZi', 4, '2023-09-06 20:59:14', 1),
 (8, 'cristianrivero102@gmail.com', '$2y$10$.Ya2c3qlg18T6vhjJ6uCk.ZxBnczT1BQ5MTTGXxRriWaD3D9Eucxe', 4, '2023-09-15 00:11:59', 1),
-(9, 'lucioanoriveros247@gmail.com', '$2y$10$Wl/UPYsJSFvrda7EyZDjoefumLv74YrUp3d05Q6zLU1THfZYnISn6', 4, '2023-09-15 00:13:36', 1),
+(9, 'lucianoriveros247@gmail.com', '$2y$10$Wl/UPYsJSFvrda7EyZDjoefumLv74YrUp3d05Q6zLU1THfZYnISn6', 4, '2023-09-15 00:13:36', 1),
 (10, 'marcelosole18@gmail.com', '$2y$10$v8cZgmVxnu/05F1ZnvARhOsKxUzM3.qEhcSFAqHvq16gF8zoaUW3y', 4, '2023-09-15 00:16:17', 1),
 (11, 'maxi.saraspe1223@gmail.com', '$2y$10$HAud2d1n4le8/OXrFLBmSeoDkaNlDDc0DBFNO8AVkYNNkJfbHL/ae', 4, '2023-09-15 00:18:41', 1),
 (12, 'lm7375142@gmail.com', '$2y$10$f42EZYHNd6UwJTrFduzVSuEsJH21fTxRbDf7JAMOUbI88OLhd9P/2', 4, '2023-09-15 00:21:21', 1),
