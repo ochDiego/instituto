@@ -29,7 +29,7 @@
           
           <li><a href="/instituto/index.php" class="nav-link px-2 link-secondary">ISFTANGACO</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Contáctanos</a></li>
+          <li><a href="<?= $url; ?>#contacto" class="nav-link px-2 link-dark">Contáctanos</a></li>
 
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle link-dark" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
