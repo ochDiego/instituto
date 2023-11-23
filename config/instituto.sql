@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2023 a las 01:57:20
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Servidor: localhost:3307
+-- Tiempo de generación: 24-10-2023 a las 23:55:25
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `alumnos` (
   `usuario_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alumnos`
@@ -44,7 +44,8 @@ CREATE TABLE `alumnos` (
 
 INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `dni`, `telefono`, `usuario_id`, `fecha`, `estado`) VALUES
 (1, 'Diego', 'Ochoa', 33743380, '2643171768', 1, '2023-09-10 10:23:53', 1),
-(4, 'Cristian', 'Rivero', 32083839, '2645452967', 8, '2023-09-15 00:11:58', 1);
+(4, 'Cristian', 'Rivero', 32083839, '2645452967', 8, '2023-09-15 00:11:58', 1),
+(5, 'Luciano', 'Riveros', 42250247, '2645786326', 9, '2023-10-18 14:34:09', 1);
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,7 @@ CREATE TABLE `carreras` (
   `descripcion` text DEFAULT NULL,
   `duracion` varchar(45) DEFAULT NULL,
   `estado` tinyint(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `carreras`
@@ -79,7 +80,7 @@ CREATE TABLE `ciclo_lectivo` (
   `fecha_inicio` date NOT NULL,
   `fecha_fin` date NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ CREATE TABLE `condicion` (
   `id` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,7 @@ CREATE TABLE `inscripcion_ciclo` (
   `alumno_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ CREATE TABLE `inscripcion_materia` (
   `alumno_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,7 @@ CREATE TABLE `inscripcion_mesa` (
   `alumno_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -146,7 +147,7 @@ CREATE TABLE `materias` (
   `nombre` varchar(75) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `materias`
@@ -211,7 +212,7 @@ CREATE TABLE `materia_carrera` (
   `carrera_id` int(11) NOT NULL,
   `periodo` varchar(30) DEFAULT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `materia_carrera`
@@ -292,7 +293,7 @@ CREATE TABLE `materia_nota` (
   `alumno_id` int(11) NOT NULL,
   `condicion_id` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -305,7 +306,7 @@ CREATE TABLE `materia_plan` (
   `materia_id` int(11) NOT NULL,
   `plan_estudio_id` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -318,7 +319,7 @@ CREATE TABLE `materia_profesor` (
   `materia_id` int(11) NOT NULL,
   `profesor_id` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -335,7 +336,7 @@ CREATE TABLE `mesa_examen` (
   `ciclo_lectivo_id` int(11) NOT NULL,
   `carrera_id` int(11) NOT NULL,
   `estado` tinyint(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -348,7 +349,7 @@ CREATE TABLE `nota_examen` (
   `nota` float(4,2) DEFAULT NULL,
   `inscripcion_mesa_id` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -365,7 +366,7 @@ CREATE TABLE `plan_estudio` (
   `correlatividades` varchar(60) DEFAULT NULL,
   `formato` varchar(60) DEFAULT NULL,
   `estado` tinyint(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -382,7 +383,7 @@ CREATE TABLE `profesores` (
   `usuario_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -394,7 +395,7 @@ CREATE TABLE `roles` (
   `id` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -417,7 +418,7 @@ CREATE TABLE `tribunal_mesa` (
   `mesa_examen_id` int(11) NOT NULL,
   `profesor_id` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -432,7 +433,7 @@ CREATE TABLE `usuarios` (
   `rol_id` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `estado` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -443,7 +444,7 @@ INSERT INTO `usuarios` (`id`, `email`, `password`, `rol_id`, `fecha`, `estado`) 
 (2, 'emanuel.pelaitay85@gmail.com', '$2y$10$SlmThtzVq0QFFQPfBBURcuXOjc/7PwcxuXs2yxuhNP9a/nuzy6I4S', 4, '2023-09-06 20:51:53', 1),
 (3, 'carlospqu@gmail.com', '$2y$10$wKuu8PhTrX74A5HuXMVesOpOLsN0ktEYwAR21pl6ArvwRoso4hJZi', 4, '2023-09-06 20:59:14', 1),
 (8, 'cristianrivero102@gmail.com', '$2y$10$.Ya2c3qlg18T6vhjJ6uCk.ZxBnczT1BQ5MTTGXxRriWaD3D9Eucxe', 4, '2023-09-15 00:11:59', 1),
-(9, 'lucianoriveros247@gmail.com', '$2y$10$Wl/UPYsJSFvrda7EyZDjoefumLv74YrUp3d05Q6zLU1THfZYnISn6', 4, '2023-09-15 00:13:36', 1),
+(9, 'lucianoriveros247@gmail.com', '$2y$10$GO1Z3TmzfRSU50.XDNuAMeTkRujwQWpR1DeH5N7T7kxKq0s2hcHrW', 4, '2023-10-18 14:34:09', 1),
 (10, 'marcelosole18@gmail.com', '$2y$10$v8cZgmVxnu/05F1ZnvARhOsKxUzM3.qEhcSFAqHvq16gF8zoaUW3y', 4, '2023-09-15 00:16:17', 1),
 (11, 'maxi.saraspe1223@gmail.com', '$2y$10$HAud2d1n4le8/OXrFLBmSeoDkaNlDDc0DBFNO8AVkYNNkJfbHL/ae', 4, '2023-09-15 00:18:41', 1),
 (12, 'lm7375142@gmail.com', '$2y$10$f42EZYHNd6UwJTrFduzVSuEsJH21fTxRbDf7JAMOUbI88OLhd9P/2', 4, '2023-09-15 00:21:21', 1),
@@ -601,7 +602,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `carreras`

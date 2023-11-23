@@ -13,6 +13,10 @@
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <title>ISFTANGACO</title>
+   <link href="<?= $url; ?>/assets/css/datatables@7.1.2_dist_style.min.css" rel="stylesheet" />
+        <link href="<?= $url; ?>/assets/css/styles.css" rel="stylesheet" />
+        <script src="<?= $url; ?>/assets/js/fontawesome_all.js crossorigin="anonymous></script>
+        <link href="<?= $url; ?>/assets/css/jquery.dataTables.min.css" rel="stylesheet" />
   <!-- favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -20,7 +24,7 @@
 
 <body>
 
-  <header class="border bg-light shadow sticky-top rounded-bottom">
+  <header class="border bg-light sticky-top rounded-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
@@ -32,27 +36,7 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-          <li><a href="/instituto/index.php" class="nav-link px-2 link-dark">Inicio</a></li>
-          <li><a href="<?= $url; ?>#sobreNosotros" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
-          <li><a href="<?= $url; ?>#contactanos" class="nav-link px-2 link-dark">Contáctanos</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle link-dark" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Carreras
-              <i class="fas fa-user fa-fw"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="<?= $url; ?>#desarrolloSoftware">Tecnicatura Superior en Desarrollo de Software</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="<?= $url; ?>#energiasRenovables">Tecnicatura Superior en Gestión de Energías Renovables</a></li>
-            </ul>
-          </li>
-
-          <?php if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == "ok") : ?>
-            <li class="ms-5"><a class="btn btn-outline-dark rounded-pill" href="<?= $url; ?>/secciones/alumno/carreras/carreras.php" class="nav-link px-2 link-light">Panel (Alumno)</a></li>
-          <?php endif ?>
+          <li><a href="/instituto/index.php" class="nav-link px-2 link-dark">Inicio</a></li>       
 
         </ul>
 
@@ -65,6 +49,7 @@
             </svg>
             <?= $_SESSION['email']; ?>
           </a>
+
 
 
           <div class="offcanvas offcanvas-end rounded-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -97,15 +82,39 @@
 
 
 
-        <?php else : ?>
-          <div class="text-end">
-            <a href="<?= $url; ?>/secciones/admin/index.php" class="btn btn-outline-dark rounded-pill me-2 py-1">Acceder</a>
-          </div>
-        <?php endif ?>
+        <?php else : 
+          header('location: '.$url.'/index.php');
+        endif ?>
 
 
 
 
       </div>
     </div>
+
   </header>
+
+  <section class="container-xxl">
+    <div class="row">
+        <aside class="col-2 bd-sidebar fs-4 bg-light text-dark shadow-lg border-0 rounded-end" style="height:89vh !important;">
+            <div class="row">
+                <div class="col mt-5">
+                  <a class="dropdown-item text-start rounded-3 px-1" href="<?= $url; ?>/secciones/alumno/carreras/carreras.php">Carrera</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                  <a class="dropdown-item text-start rounded-3 px-1" href="#">Mesas de exámen</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                  <a class="dropdown-item text-start rounded-3 px-1" href="<?= $url; ?>/secciones/alumno/perfil.php">Mi perfil</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                  <a class="dropdown-item text-start rounded-3 px-1" href="<?= $url; ?>/secciones/admin/cerrar.php">Cerrar sesión</a>
+                </div>
+            </div>
+        </aside>

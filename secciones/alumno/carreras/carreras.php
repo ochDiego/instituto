@@ -1,15 +1,15 @@
 <?php 
-    require_once '../../../templates/header.php'; 
+    require_once '../templates/header.php'; 
 ?>
 
-<div class="conteiner">
-    <h2 class="mt-4 text-center fs-1">Carreras</h2>
+<div class="col-10">
+    <h2 class="mt-4 text-center fs-1">Carrera</h2>
     
         <div class="card mx-4">
             <div class="card-body my-4">
                 <div class="row d-flex justify-content-evenly align-items-center">
                     
-                    <div class="col-5">
+                    <div class="col-6">
                         <div class="card bg-dark text-white shadow-lg">
                             <img src="../../../assets/imagenes/carreras/software/desarrollo_software.jpg" class="card-img" alt="...">
                                 <div class="card-img-overlay">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6">
                         <div class="card bg-dark text-white shadow-lg">
                             <img src="../../../assets/imagenes/carreras/energias/energias-renovables.webp" class="card-img" alt="...">
                                 <div class="card-img-overlay">
@@ -37,5 +37,5 @@
 
 </div>
 <?php 
-    require_once '../../../templates/footer.php'; 
+    require_once '../templates/footer.php'; 
 ?>

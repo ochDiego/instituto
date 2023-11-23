@@ -43,7 +43,7 @@
                                                 <label for="inputPassword">Contraseña</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="/instituto/index.php">Ir al sitio</a>
+                                                <a class="btn btn-secondary" href="/instituto/index.php">Ir al sitio</a>
                                                 <button type="submit" class="btn btn-primary">Acceder</button>
                                             </div>
                                         </form>
