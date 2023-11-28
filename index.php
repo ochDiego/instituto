@@ -56,7 +56,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        El desarrollo de software es el conjunto de actividades para el diseño, creación y despliegue de programas informáticos. En otras palabras, se trata de todos los procesos involucrados en un proyecto de software. Desde su origen, pasando por la producción y las revisiones, hasta la entrega y posterior mantenimiento.
                     </div>
                 </div>
             </div>
@@ -68,7 +68,15 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    El/la Técnico/a Superior en Desarrollo de Software estará capacitado/a para diseñar y producir artefactos de software, reutilizar elementos existentes, implementarlos, programarlos y ocuparse de su optimización y mantenimiento.<br><br>
+                    Las principales funciones y responsabilidades de un desarrollador de software son:<br><br>    
+
+                    - Creación de un código específico y pruebas posteriores.<br>  
+                    - Colaboración con los clientes sobre los informes necesarios y supervisión del proceso que los convierte en realidad.<br>  
+                    - Uso de una serie de herramientas de desarrollo para facilitar el uso de procesos y sistemas.  <br>
+                    - Cartografiar el diseño de una aplicación de software y utilizar diagramas de flujo para resaltar cada etapa del proceso. <br> 
+                    - Organización de actualizaciones y reparaciones de aplicaciones de software existentes.  <br>
+                    - Comunicación del progreso con la dirección a través de informes, reuniones y presentaciones.  <br><br>
                     </div>
                 </div>
             </div>
@@ -80,7 +88,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        La demanda y las oportunidades laborales en el sector existen y seguirán aumentando con el paso de los años
                     </div>
                 </div>
             </div>
@@ -130,7 +138,7 @@
                 </h2>
                 <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
                     <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        Se denomina “energías renovables” a aquellas fuentes energéticas basadas en la utilización del sol, el viento, el agua o la biomasa vegetal o animal entre otras-. Se caracterizan por no utilizar combustibles fósiles como sucede con las energías convencionales, sino recursos capaces de renovarse ilimitadamente.
                     </div>
                 </div>
             </div>
@@ -142,7 +150,23 @@
                 </h2>
                 <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                        - Resolver problemas y analizar todas sus variables dentro de su campo
+                        profesional, que impliquen el dominio y la conceptualización de saberes
+                        científicos tecnológicos y gerenciales, desarrollando posibles estrategias para
+                        su resolución.<br><br>
+                        - Diseñar, gestionar y evaluar proyectos y/o procesos en el ámbito de su
+                        especialidad que lleven a la mejora de la calidad de la organización,
+                        respetando normas de seguridad, higiene y cuidado del medio ambiente.<br><br>
+                        - Asumir el rol de liderazgo y coordinación, reconociendo el rol de de cada
+                        integrante del proyecto, transmitiendo la información necesaria en forma
+                        precisa y utilizando el lenguaje apropiado para el entendimiento mutuo en
+                        interacciones individuales o grupales.<br><br>
+                        -Documentar todas las etapas de su tarea como así también las
+                        especificaciones de los productos que puedan surgir de su trabajo,
+                        referenciando y registrando de tal manera que le facilite acceder
+                        posteriormente en forma rápida para recuperarla y/o evaluarla.
+
                     </div>
                 </div>
             </div>
@@ -154,7 +178,7 @@
                 </h2>
                 <div id="collapseThree2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        Debido al compromiso que está adquiriendo la sociedad con el medioambiente, las empresas destinan sus esfuerzos en adaptarse a las nuevas políticas de cuidado del planeta. Esto influye directamente en el campo laboral de los especialistas en energía renovable, ya que incrementa la demanda dentro de la industria. Como consecuencia, podrás trabajar en cualquier país con buenas oportunidades de crecimiento a futuro.
                     </div>
                 </div>
             </div>

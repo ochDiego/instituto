@@ -1,8 +1,8 @@
 <?php 
-    require_once '../templates/header.php'; 
+    require_once './templates/header.php'; 
 ?>
 
-<div class="col-10">
+<div class="container">
     <h2 class="mt-4 text-center fs-1">Carrera</h2>
     
         <div class="card mx-4">
@@ -11,7 +11,7 @@
                     
                     <div class="col-6">
                         <div class="card bg-dark text-white shadow-lg">
-                            <img src="../../../assets/imagenes/carreras/software/desarrollo_software.jpg" class="card-img" alt="...">
+                            <img src="./../../assets/imagenes/carreras/software/desarrollo_software.jpg" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Desarrollo de Software</h3>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -22,7 +22,7 @@
 
                     <div class="col-6">
                         <div class="card bg-dark text-white shadow-lg">
-                            <img src="../../../assets/imagenes/carreras/energias/energias-renovables.webp" class="card-img" alt="...">
+                            <img src="./../../assets/imagenes/carreras/energias/energias-renovables.webp" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Gestión de Energías Renovables</h3>
                                 <p class="card-text">Se denomina energía renovable a la energía que se obtiene a partir de fuentes naturales virtualmente inagotables.</p>
@@ -37,5 +37,5 @@
 
 </div>
 <?php 
-    require_once '../templates/footer.php'; 
+    require_once './templates/footer.php'; 
 ?>

@@ -1,11 +1,18 @@
 <?php require_once './templates/header.php'; ?>
 
     <?php require_once 'procesar_actualizar.php'; ?>
+    
+    <?php //if ((isset($alumno['nombre']))&&(isset($alumno['apellido']))&&(isset($alumno['dni']))&&(isset($alumno['telefono']))) : ?>
 
-    <div class="col-10">
+        <?php //header('location:' . $url . '/secciones/alumno/index.php?ok'); ?>
+        
+    <?php //endif ?>
+
+
+    <div class="container">
 
         <div class="row">
-            <h3 class="mt-4 text-center fs-1">Editar perfil</h3>
+            <h3 class="mt-4 text-center fs-1">Actualizar perfil</h3>
 
             <div class="col-17 col-md-8 mx-auto">
                 <div class="card shadow-lg border-0 rounded-lg mt-5 p-5 bg-light">
