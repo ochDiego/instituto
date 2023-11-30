@@ -34,8 +34,8 @@
 
           <li class="ms-2">
 
-            <a class="btn btn-outline-dark rounded-pill d-flex justify-content-center align-items-center px-3" href="<?= $url; ?>/secciones/alumno/index.php" >
-              <svg class="me-1" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="gray" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <a class="btn btn-outline-dark rounded-pill d-flex justify-content-center align-items-center px-3" href="<?= $url; ?>/secciones/alumno/index.php">
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="gray" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path d="M240.1 4.2c9.8-5.6 21.9-5.6 31.8 0l171.8 98.1L448 104l0 .9 47.9 27.4c12.6 7.2 18.8 22 15.1 36s-16.4 23.8-30.9 23.8H32c-14.5 0-27.2-9.8-30.9-23.8s2.5-28.8 15.1-36L64 104.9V104l4.4-1.6L240.1 4.2zM64 224h64V416h40V224h64V416h48V224h64V416h40V224h64V420.3c.6 .3 1.2 .7 1.8 1.1l48 32c11.7 7.8 17 22.4 12.9 35.9S494.1 512 480 512H32c-14.1 0-26.5-9.2-30.6-22.7s1.1-28.1 12.9-35.9l48-32c.6-.4 1.2-.7 1.8-1.1V224z" />
               </svg>
               Carrera
@@ -43,9 +43,9 @@
 
           </li>
           <li class="ms-2">
-            <a class="btn btn-outline-dark rounded-pill d-flex justify-content-center align-items-center px-3" href="#" >
-              <svg class="me-1" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="gray" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M481 31C445.1-4.8 386.9-4.8 351 31l-15 15L322.9 33C294.8 4.9 249.2 4.9 221.1 33L135 119c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L255 66.9c9.4-9.4 24.6-9.4 33.9 0L302.1 80 186.3 195.7 316.3 325.7 481 161c35.9-35.9 35.9-94.1 0-129.9zM293.7 348.3L163.7 218.3 99.5 282.5c-48 48-80.8 109.2-94.1 175.8l-5 25c-1.6 7.9 .9 16 6.6 21.7s13.8 8.1 21.7 6.6l25-5c66.6-13.3 127.8-46.1 175.8-94.1l64.2-64.2z" />
+            <a class="btn btn-outline-dark rounded-pill d-flex justify-content-center align-items-center px-3" href="<?= $url; ?>/secciones/alumno/mesas_examen.php">
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="gray" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                <path d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z" />
               </svg>
               Mesas
             </a>
@@ -139,7 +139,8 @@
   </header>
 
   <!-- Alerta de bienvenida se muestra cuano el usuario tiene todos los datos de perfil -->
-  <!-- <?php //if (isset($_GET['ok'])) : ?>
+  <!-- <?php //if (isset($_GET['ok'])) : 
+        ?>
     <div class="alert alert-success alert-dismissible fade show d-flex align-items-center justify-content-center mt-2 mx-3 text-center" role="alert">
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check-circle-fill" viewBox="0 0 16 16">
@@ -152,4 +153,5 @@
       Te damos la bienvenida <strong><?= $alumno['nombre']; ?></strong>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-  <?php //endif ?> -->
+  <?php //endif 
+  ?> -->

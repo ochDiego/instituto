@@ -5,12 +5,12 @@
 <div class="container">
     <h2 class="mt-4 text-center fs-1">Carrera</h2>
     
-        <div class="card mx-4">
+        <div class="card mx-4 shadow-lg border-0 px-4">
             <div class="card-body my-4">
                 <div class="row d-flex justify-content-evenly align-items-center">
                     
                     <div class="col-6">
-                        <div class="card bg-dark text-white shadow-lg">
+                        <div class="card bg-dark text-white shadow-lg border-0">
                             <img src="./../../assets/imagenes/carreras/software/desarrollo_software.jpg" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Desarrollo de Software</h3>
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="col-6">
-                        <div class="card bg-dark text-white shadow-lg">
+                        <div class="card bg-dark text-white shadow-lg border-0">
                             <img src="./../../assets/imagenes/carreras/energias/energias-renovables.webp" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                 <h3 class="card-title">Tecnicatura Superior en Gestión de Energías Renovables</h3>

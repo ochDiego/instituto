@@ -21,6 +21,10 @@
         <link href="<?= $url; ?>/assets/css/styles.css" rel="stylesheet" />
         <script src="<?= $url; ?>/assets/js/fontawesome_all.js crossorigin="anonymous"></script>
         <link href="<?= $url; ?>/assets/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

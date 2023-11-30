@@ -1,5 +1,6 @@
 <?php require_once '../templates/header.php'; ?>
 
+
     <?php 
         require_once '../../../config/database.php';
 
@@ -14,7 +15,7 @@
         $sentencia3 = $pdo->query("SELECT * FROM carreras WHERE estado = 1");
         $carreras = $sentencia3->fetchAll(PDO::FETCH_ASSOC);
 
-        $sentencia4 = $pdo->query("SELECT * FROM ciclo_lectivo WHERE estado = 1");
+        $sentencia4 = $pdo->query("SELECT * FROM materia_carrera WHERE estado = 1");
         $ciclosLectivos = $sentencia4->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
@@ -47,7 +48,7 @@
                             <div class="col-6">
                                <div class="mb-3">
                                 <label for="" class="form-label">Materia:</label>
-                                <select class="form-select form-select-md" name="" id="">
+                                <select class="form-select form-select-md" name="materia">
 
                                     <option value="none" selected disabled hidden></option>
 
@@ -61,7 +62,7 @@
                             <div class="col-6">
                                <div class="mb-3">
                                 <label for="" class="form-label">Profesor:</label>
-                                <select class="form-select form-select-md" name="" id="">
+                                <select class="form-select form-select-md" name="profe" id="profe">
 
                                     <option value="none" selected disabled hidden></option>
 
@@ -75,7 +76,7 @@
                             <div class="col-6">
                                <div class="mb-3">
                                 <label for="" class="form-label">Carrera:</label>
-                                <select class="form-select form-select-md" name="" id="">
+                                <select class="form-select form-select-md" name="carrera" id="carrera">
 
                                     <option value="none" selected disabled hidden></option>
 
@@ -89,12 +90,12 @@
                             <div class="col-6">
                                <div class="mb-3">
                                 <label for="" class="form-label">Ciclo lectivo:</label>
-                                <select class="form-select form-select-md" name="" id="">
+                                <select class="form-select form-select-md" name="ciclo" id="ciclo">
 
                                         <option value="none" selected disabled hidden></option>
 
                                     <?php foreach($ciclosLectivos as $cicloLectivo): ?>
-                                        <option value="<?= $cicloLectivo["id"]; ?>"><?= $cicloLectivo["nombre"]; ?></option>
+                                        <option value="<?= $cicloLectivo["id"]; ?>"><?= $cicloLectivo["periodo"]; ?></option>
                                     <?php endforeach ?>
                                 </select>
                                </div>
@@ -105,6 +106,7 @@
                             </div>
                         </div>
                     </form>
+                    <?php require_once 'procesar_registro.php'; ?>
                 </div>
             </div>
         </div>

@@ -4,7 +4,14 @@
         require_once '../../../config/database.php';
 
         $pdo = Database::conectar();
-
+        $sentencia =  $pdo->query("SELECT e.fecha_inicio AS fi, e.fecha_fin AS ff, m.nombre AS materia, p.nombre AS profesor, mc.periodo AS ciclo_lectivo, c.nombre AS carrera FROM mesa_examen e 
+         JOIN materias m ON m.id = e.materia_id 
+         JOIN profesores p ON p.id = e.profesor_id 
+         JOIN materia_carrera mc ON mc.id = e.materia_id 
+         JOIN carreras c ON c.id = e.carrera_id 
+         
+        WHERE e.estado = 1 ");
+        $mesas = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     
     ?>
 
@@ -27,10 +34,26 @@
                         <th>Profesor</th>
                         <th>Ciclo lectivo</th>
                         <th>Carrera</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                   
+                  <?php foreach($mesas as $mesa):?>
+                   <tr>
+                        <td><?= $mesa['fi']; ?></td>
+                        <td><?= $mesa['ff']; ?></td>
+                        <td><?= $mesa['materia']; ?></td>
+                        <td><?= $mesa['profesor']; ?></td>
+                        <td><?= $mesa['ciclo_lectivo']; ?></td> 
+                        <td><?= $mesa['carrera']; ?></td>
+                        <td width="125px">
+                                <a name="" id="" class="btn btn-info btn-sm" href="#" role="button">Editar</a>
+
+                                <a name="" id="" class="btn btn-danger btn-sm" href="#" role="button">Eliminar</a>
+                            </td>
+                                               
+                   </tr>
+                   <?php endforeach ?>
                 </tbody>
             </table>
         </div>
